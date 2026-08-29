@@ -1,0 +1,38 @@
+{
+  "name": "genpark-schema-enforced-structured-llm-extraction-validator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Schema-enforced structured LLM extraction engine validating complex object graphs with automated retry backoff.",
+  "author": "genpark",
+  "category": "structured-extraction",
+  "tags": [
+    "instructor",
+    "structured-outputs",
+    "pydantic-validation",
+    "schema-enforcement",
+    "json-mode"
+  ],
+  "inputs": {
+    "unstructured_source_text": {
+      "type": "string"
+    },
+    "schema_model_name": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "extraction_job_id": {
+      "type": "string"
+    },
+    "structured_entity": {
+      "type": "object"
+    },
+    "pydantic_validation_passed": {
+      "type": "boolean"
+    },
+    "schema_json_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
